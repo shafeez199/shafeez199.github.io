@@ -1,10 +1,16 @@
-# Homework 5 - Michigan LLD Dataset Visualizations
+# Homework 5 - Illinois Licensing Dataset
 
-[The Data](https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/michigan_lld.flt)  
+[The Data]('https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/licenses_fall2022.csv')
 [The Analysis](https://github.com/shafeez199/shafeez199.github.io/blob/main/hw5/analysis.ipynb)
 
-## Visualization 1 - Michigan Heatmap
+## Visualization 1 - Number of Licenses by License Type
 
-<iframe src="assets/michigan_map.html" width="700" height="575" frameborder="0"></iframe>
+<iframe src="assets/license_types.html" width="700" height="475" frameborder="0"></iframe>
 
-The first visualization visualizes the dataset in a heatmap by each rectangle as a location 
+For my first visualization, I wanted to highlight the diversity of every Illinois license type. This dataset includes every Illinois professional license, and I wanted to investigate which licenses appear the most in this dataset. I wanted to highlight the most common licenses and see if it is due to higher demands. From this, it seems like many popular licenses are within the medical field, with cosmetology and dental having the second and third highest number of licenses. For my visualizations, I marked the Number of Licenses on the x-axis and License Types on the Y-axis. For my visualization, I chose a bar chart because it is easier to visualize the categories. For my color choices, I wanted to develop a clean layout, so I used only one color for the graph.
+
+## Visualization 2: Top Counties Listed by License Status
+
+<iframe src="assets/license_types.html" width="700" height="475" frameborder="0"></iframe>
+
+For my second visualization, I wanted to showcase the different license statuses per Illinois county. The x-axis is the number of licenses, and the y-axis is the counties. For this visualization, I chose a bar chart because I wanted to highlight the relationship between license status and counties. I once again used one color for the bar chart because I wanted to make sure it would not be an eyesore. Even though there are fewer y-values compared to the first graph, I still wanted to make sure it was inclusive, and easy to read my graph, so I made sure to include the top 10 counties. For users, I created an interactive license status dropdown, so users can filter out what status they can see per county. Overall, I wanted to make sure that this graph is easy to read and accessible. 
