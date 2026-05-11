@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-32bf2958afdc0a059d590421ddd0dafd"}, "mark": {"type": "bar"}, "encoding": {"color": {"value": "steelblue"}, "tooltip": [{"field": "License Type", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Count", "title": "Num of Licenses", "type": "quantitative"}, "y": {"field": "License Type", "sort": "-x", "title": "License Type", "type": "nominal"}}, "height": 400, "title": "Num of Licenses by License Types", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-32bf2958afdc0a059d590421ddd0dafd": [{"License Type": "DETECTIVE BOARD", "Count": 4759}, {"License Type": "COSMO", "Count": 3579}, {"License Type": "DENTAL", "Count": 681}, {"License Type": "FUNERAL AND EMBALMER", "Count": 97}, {"License Type": "DIETETIC AND NUTRITION", "Count": 69}, {"License Type": "DESIGN FIRM", "Count": 66}, {"License Type": "MASSAGE LICENSING BD", "Count": 50}, {"License Type": "HOME INSPECTOR", "Count": 42}, {"License Type": "COMM ASSOC MGR", "Count": 37}, {"License Type": "CLIN PSYCHOLOGIST", "Count": 24}, {"License Type": "INTERIOR DESIGN", "Count": 21}, {"License Type": "ARCHITECT", "Count": 19}, {"License Type": "LAND SURVEYOR BOARD", "Count": 17}, {"License Type": "COLLECTION AGENCY", "Count": 16}, {"License Type": "LIMITED LIABILITY CO", "Count": 16}, {"License Type": "HME AND SERVICES PROV", "Count": 15}, {"License Type": "MAR AND FAM THERAPIST", "Count": 14}, {"License Type": "ATHLETIC TRAINER", "Count": 14}, {"License Type": "ENVIRON. HLTH PRACT", "Count": 10}, {"License Type": "ATHLETICS", "Count": 9}, {"License Type": "IDPR", "Count": 8}, {"License Type": "GEOLOGY", "Count": 7}, {"License Type": "LANDSCAPE ARCHITECT", "Count": 7}, {"License Type": "APPRAISAL", "Count": 4}, {"License Type": "MEDICAL BOARD", "Count": 4}, {"License Type": "AUCTIONEER", "Count": 2}, {"License Type": "CEMETERY OVERSIGHT", "Count": 1}, {"License Type": "DETECT. DECEPTION", "Count": 1}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
